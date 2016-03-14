@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../css/cosmo.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+
+
+    <div class="jumbotron">
+  <h1>Online Quiz System</h1>
+</div>
+
+
+      <div class="col-md-offset-4">
+      <div class="col-md-6">
+          <div class="panel panel-warning">
+          <div class="panel-heading">
+    <h3 class="panel-title">Sign In</h3>
+  </div>
+  <div class="panel-body">
+        <p style=color:red;><i>{{ msg }}</i></p>
+      <form class="form-horizontal" name="login" method="post"  action="/submit">
+
+     <fieldset>
+         <div class="col-md-offset-4">
+         <p style="color:orange" > {{error}}</p>
+         </div>
+
+        <div class="form-group">
+          <label for="inputEmail" class="col-md-offset-1 col-lg-2 control-label">Username</label>
+          <div class="col-md-offset-1 col-lg-7">
+            <input type="text" class="form-control" name="user" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-md-offset-1 col-lg-2 control-label">Password</label>
+          <div class="col-md-offset-1 col-lg-7">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+          </div>
+        </div>
+         <div class="form-group">
+
+          <div class="col-md-offset-1 col-lg-7">
+              <div class="g-recaptcha" data-sitekey="6Lc37g8TAAAAAA6Yj8P-3mjRZQpn7WmBtvwdOONq"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-5">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+     </form>
+
+     Don't have an Account ?
+     <a href ="/register" >Sign up Now </a>
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  </body>
+</html>

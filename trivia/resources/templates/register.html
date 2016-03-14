@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>User Registration</title>
+        <link rel="stylesheet" href="/css/cosmo.css">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body>
+        <div class="jumbotron">
+  <h1>CS590 Homework1</h1>
+</div>
+  <div class="col-md-offset-3">
+      <div class="col-md-8">
+          <div class="panel panel-warning">
+          <div class="panel-heading">
+    <h3 class="panel-title">Sign Up</h3>
+  </div>
+  <div class="panel-body">
+
+<form class="form-horizontal" method="post"  action="/register-db">
+
+     <fieldset>
+        <h4> {{msg}}</h4>
+
+        <div class="form-group">
+          <label for="fname" class="col-lg-2 control-label">First Name</label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" name ="fname" placeholder="First Name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lname" class="col-lg-2 control-label">Last Name</label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Username</label>
+          <div class="col-lg-7">
+            <input type="text" id="eval-username" class="form-control" name="eval-username" placeholder="Email" required>
+              <p id="eval-result_u"></p>
+              <input id="hid-username" name="hid-username" type="hidden" size="70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+          <div class="col-lg-7">
+            <input type="password" class="form-control" name="eval-password" id="eval-password" placeholder="Password" required>
+              <p id="eval-result_p"></p>
+              <input id="hid-password" name="hid-password" type="hidden" size="70" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-lg-2 control-label">Confirm Password</label>
+          <div class="col-lg-7">
+            <input type="password" class="form-control" name="eval-rpassword" id="eval-rpassword" placeholder="Retype Password" required>
+              <p id="eval-result_rp"></p>
+             <input id="hid-rpassword" name="hid-rpassword" type="hidden" size="70" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-2 control-label">Sex</label>
+          <div class="col-lg-7">
+            <div class="radio">
+              <label>
+                <input type="radio" name="sex" id="fm" value="female" checked="">
+                Female
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="sex" id="m" value="male">
+                Male
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <div class="g-recaptcha" data-sitekey="6Lc37g8TAAAAAA6Yj8P-3mjRZQpn7WmBtvwdOONq"></div>
+        </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+
+      </fieldset>
+
+    </form>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+
+
+
+        <script src="/js/client.js" language="javascript"></script>
+        <script type="text/javascript" language="javascript">
+            trivia.register.main()
+        </script>
+    </body>
+</html>
